@@ -13,7 +13,9 @@ activityCompose = "1.10.1"
 composeBom = "2025.06.00"
 mapSdk = "3.21.0"
 mavericksCompose = "3.0.10"
+navigationCompose = "2.9.0"
 playServicesAds = "24.4.0"
+playServicesLocation = "21.3.0"
 room = "2.7.1"
 ksp = "2.0.21-1.0.27"
 googleService = "4.4.2"
@@ -21,6 +23,7 @@ firebaseCrashlytics = "3.0.4"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
 androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
@@ -48,6 +51,7 @@ kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serializa
 map-sdk = { module = "com.naver.maps:map-sdk", version.ref = "mapSdk" }
 mavericks-compose = { module = "com.airbnb.android:mavericks-compose", version.ref = "mavericksCompose" }
 play-services-ads = { module = "com.google.android.gms:play-services-ads", version.ref = "playServicesAds" }
+play-services-location = { module = "com.google.android.gms:play-services-location", version.ref = "playServicesLocation" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
