@@ -101,4 +101,7 @@ dependencies {
 
     // admob
     implementation(libs.play.services.ads)
+
+    // navigation
+    implementation(libs.androidx.navigation.compose)
 }
