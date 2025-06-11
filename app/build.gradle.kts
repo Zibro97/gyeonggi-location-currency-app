@@ -104,4 +104,7 @@ dependencies {
 
     // navigation
     implementation(libs.androidx.navigation.compose)
+
+    // location
+    implementation(libs.play.services.location)
 }
