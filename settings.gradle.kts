@@ -1,4 +1,5 @@
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         google {
             content {
@@ -22,3 +23,8 @@ dependencyResolutionManagement {
 
 rootProject.name = "GyeonggiLocationCurrencyApp"
 include(":app")
+include(":data")
+include(":domain")
+include(":presentation")
+include(":core")
+include(":build-logic:convention")
