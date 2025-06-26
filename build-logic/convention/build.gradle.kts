@@ -43,8 +43,56 @@ tasks {
 gradlePlugin {
     plugins {
         register("androidApplication") {
-            id = libs.plugins.gyeonggicurrency.android.application.get().pluginId // Problematic line
+            id = libs.plugins.gyeonggicurrency.android.application.asProvider().get().pluginId
             implementationClass = "AndroidApplicationConventionPlugin"
+        }
+        register("androidApplicationCompose") {
+            id = libs.plugins.gyeonggicurrency.android.application.compose.get().pluginId
+            implementationClass = "AndroidApplicationComposeConventionPlugin"
+        }
+        register("androidApplicationJacoco") {
+            id = libs.plugins.gyeonggicurrency.android.application.jacoco.get().pluginId
+            implementationClass = "AndroidApplicationJacocoConventionPlugin"
+        }
+        register("androidLibraryCompose") {
+            id = libs.plugins.gyeonggicurrency.android.library.compose.get().pluginId
+            implementationClass = "AndroidLibraryComposeConventionPlugin"
+        }
+        register("androidLibrary") {
+            id = libs.plugins.gyeonggicurrency.android.library.asProvider().get().pluginId
+            implementationClass = "AndroidLibraryConventionPlugin"
+        }
+        register("androidFeature") {
+            id = libs.plugins.gyeonggicurrency.android.feature.get().pluginId
+            implementationClass = "AndroidFeatureConventionPlugin"
+        }
+        register("androidLibraryJacoco") {
+            id = libs.plugins.gyeonggicurrency.android.library.jacoco.get().pluginId
+            implementationClass = "AndroidLibraryJacocoConventionPlugin"
+        }
+        register("androidTest") {
+            id = libs.plugins.gyeonggicurrency.android.test.get().pluginId
+            implementationClass = "AndroidTestConventionPlugin"
+        }
+        register("hilt") {
+            id = libs.plugins.gyeonggicurrency.hilt.get().pluginId
+            implementationClass = "HiltConventionPlugin"
+        }
+        register("androidRoom") {
+            id = libs.plugins.gyeonggicurrency.android.room.get().pluginId
+            implementationClass = "AndroidRoomConventionPlugin"
+        }
+        register("androidFirebase") {
+            id = libs.plugins.gyeonggicurrency.android.application.firebase.get().pluginId
+            implementationClass = "AndroidApplicationFirebaseConventionPlugin"
+        }
+        register("androidLint") {
+            id = libs.plugins.gyeonggicurrency.android.lint.get().pluginId
+            implementationClass = "AndroidLintConventionPlugin"
+        }
+        register("jvmLibrary") {
+            id = libs.plugins.gyeonggicurrency.jvm.library.get().pluginId
+            implementationClass = "JvmLibraryConventionPlugin"
         }
     }
 }

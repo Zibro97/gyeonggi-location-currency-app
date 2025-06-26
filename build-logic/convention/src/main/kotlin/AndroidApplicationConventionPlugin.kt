@@ -1,6 +1,7 @@
 import com.android.build.api.dsl.ApplicationExtension
 import com.android.build.api.variant.ApplicationAndroidComponentsExtension
 import com.android.build.gradle.BaseExtension
+import com.zibro.gyeonggilocationcurrencyapp.configureGradleManagedDevices
 import com.zibro.gyeonggilocationcurrencyapp.configureKotlinAndroid
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -16,14 +17,14 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
         with(target) {
             apply(plugin = "com.android.application")
             apply(plugin = "org.jetbrains.kotlin.android")
-            apply(plugin = "nowinandroid.android.lint")
-            apply(plugin = "com.dropbox.dependency-guard")
+            apply(plugin = "zibro.android.lint")
 
             extensions.configure<ApplicationExtension> {
                 configureKotlinAndroid(this)
                 defaultConfig.targetSdk = 35
                 @Suppress("UnstableApiUsage")
                 testOptions.animationsDisabled = true
+                configureGradleManagedDevices(this)
             }
         }
     }

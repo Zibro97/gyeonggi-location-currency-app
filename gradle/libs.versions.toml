@@ -85,3 +85,15 @@ jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrai
 
 # plugins defined by this project
 gyeonggicurrency-android-application = { id = "gyeonggicurrency.android.application"}
+gyeonggicurrency-android-application-compose = { id = "gyeonggicurrency.android.application.compose" }
+gyeonggicurrency-android-application-firebase = { id = "gyeonggicurrency.android.application.firebase" }
+gyeonggicurrency-android-application-jacoco = { id = "gyeonggicurrency.android.application.jacoco" }
+gyeonggicurrency-android-feature = { id = "gyeonggicurrency.android.feature" }
+gyeonggicurrency-android-library = { id = "gyeonggicurrency.android.library" }
+gyeonggicurrency-android-library-compose = { id = "gyeonggicurrency.android.library.compose" }
+gyeonggicurrency-android-library-jacoco = { id = "gyeonggicurrency.android.library.jacoco" }
+gyeonggicurrency-android-lint = { id = "gyeonggicurrency.android.lint" }
+gyeonggicurrency-android-room = { id = "gyeonggicurrency.android.room" }
+gyeonggicurrency-android-test = { id = "gyeonggicurrency.android.test" }
+gyeonggicurrency-hilt = { id = "gyeonggicurrency.hilt" }
+gyeonggicurrency-jvm-library = { id = "gyeonggicurrency.jvm.library" }

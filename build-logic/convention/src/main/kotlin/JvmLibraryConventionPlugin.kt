@@ -1,19 +1,19 @@
-import org.gradle.api.JavaVersion
+import com.zibro.gyeonggilocationcurrencyapp.configureKotlinJvm
+import com.zibro.gyeonggilocationcurrencyapp.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.apply
-import org.gradle.kotlin.dsl.withType
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.gradle.kotlin.dsl.dependencies
 
 class JvmLibraryConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
-            apply("org.jetbrains.kotlin.jvm")
+            apply(plugin = "org.jetbrains.kotlin.jvm")
+            apply(plugin = "zibro.android.lint")
 
-            tasks.withType<KotlinCompile>().configureEach {
-                kotlinOptions {
-                    jvmTarget = JavaVersion.VERSION_17.toString()
-                }
+            configureKotlinJvm()
+            dependencies {
+                "testImplementation"(libs.findLibrary("kotlin.test").get())
             }
         }
     }
