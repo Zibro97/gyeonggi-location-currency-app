@@ -1,8 +1,10 @@
 [versions]
 agp = "8.4.0"
 firebaseBom = "33.14.0"
+firebaseCrashlyticsPlugin = "3.0.2"
+firebasePerfPlugin = "1.4.2"
 hiltAndroid = "2.56.2"
-kotlin = "2.0.21"
+kotlin = "2.1.10"
 coreKtx = "1.16.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -24,10 +26,14 @@ appcompat = "1.7.0"
 material = "1.12.0"
 jetbrainsKotlinJvm = "2.0.21"
 androidTools = "31.5.0"
+truth = "1.4.4"
 
 [libraries]
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 android-tools-common = { group = "com.android.tools", name = "common", version.ref = "androidTools" }
+compose-gradlePlugin = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "kotlin" }
+firebase-crashlytics-gradlePlugin = { group = "com.google.firebase", name = "firebase-crashlytics-gradle", version.ref = "firebaseCrashlyticsPlugin" }
+firebase-performance-gradlePlugin = { group = "com.google.firebase", name = "perf-plugin", version.ref = "firebasePerfPlugin" }
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
 room-gradlePlugin = { group = "androidx.room", name = "room-gradle-plugin", version.ref = "room" }
@@ -64,6 +70,7 @@ play-services-ads = { module = "com.google.android.gms:play-services-ads", versi
 play-services-location = { module = "com.google.android.gms:play-services-location", version.ref = "playServicesLocation" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+truth = { group = "com.google.truth", name = "truth", version.ref = "truth" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -76,3 +83,17 @@ firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "
 android-library = { id = "com.android.library", version.ref = "agp" }
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
 
+# plugins defined by this project
+gyeonggicurrency-android-application = { id = "gyeonggicurrency.android.application"}
+gyeonggicurrency-android-application-compose = { id = "gyeonggicurrency.android.application.compose" }
+gyeonggicurrency-android-application-firebase = { id = "gyeonggicurrency.android.application.firebase" }
+gyeonggicurrency-android-application-jacoco = { id = "gyeonggicurrency.android.application.jacoco" }
+gyeonggicurrency-android-feature = { id = "gyeonggicurrency.android.feature" }
+gyeonggicurrency-android-library = { id = "gyeonggicurrency.android.library" }
+gyeonggicurrency-android-library-compose = { id = "gyeonggicurrency.android.library.compose" }
+gyeonggicurrency-android-library-jacoco = { id = "gyeonggicurrency.android.library.jacoco" }
+gyeonggicurrency-android-lint = { id = "gyeonggicurrency.android.lint" }
+gyeonggicurrency-android-room = { id = "gyeonggicurrency.android.room" }
+gyeonggicurrency-android-test = { id = "gyeonggicurrency.android.test" }
+gyeonggicurrency-hilt = { id = "gyeonggicurrency.hilt" }
+gyeonggicurrency-jvm-library = { id = "gyeonggicurrency.jvm.library" }
