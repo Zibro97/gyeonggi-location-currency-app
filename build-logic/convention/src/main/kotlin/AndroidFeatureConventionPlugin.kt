@@ -26,8 +26,8 @@ import org.gradle.kotlin.dsl.dependencies
 class AndroidFeatureConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
-            apply(plugin = "zibro.android.library")
-            apply(plugin = "zibro.hilt")
+            apply(plugin = "gyeonggicurrency.android.library")
+            apply(plugin = "gyeonggicurrency.hilt")
             apply(plugin = "org.jetbrains.kotlin.plugin.serialization")
 
             extensions.configure<LibraryExtension> {
@@ -36,8 +36,8 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
             }
 
             dependencies {
-                "implementation"(project(":core:ui"))
-                "implementation"(project(":core:designsystem"))
+//                "implementation"(project(":core:ui"))
+//                "implementation"(project(":core:designsystem"))
 
                 "implementation"(libs.findLibrary("androidx.hilt.navigation.compose").get())
                 "implementation"(libs.findLibrary("androidx.lifecycle.runtimeCompose").get())
