@@ -27,3 +27,4 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 rootProject.name = "GyeonggiLocationCurrencyApp"
 include(":app")
 include(":feature:map")
+include(":network")
