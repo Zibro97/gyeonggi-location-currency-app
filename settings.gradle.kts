@@ -4,7 +4,7 @@ pluginManagement {
         google {
             content {
                 includeGroupByRegex("com\\.android.*")
-                includeGroupByRegex("com\\.zibro.*")
+                includeGroupByRegex("com\\.google.*")
                 includeGroupByRegex("androidx.*")
             }
         }
@@ -27,3 +27,9 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 rootProject.name = "GyeonggiLocationCurrencyApp"
 include(":app")
 include(":feature:map")
+include(":core:database")
+include(":core:model")
+include(":core:domain")
+include(":core:data")
+include(":core:ui")
+include(":core:network")

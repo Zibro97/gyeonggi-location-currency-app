@@ -36,7 +36,7 @@ internal fun configureGradleManagedDevices(
 
     commonExtension.testOptions {
         managedDevices {
-            devices {
+            allDevices {
                 allDevices.forEach { deviceConfig ->
                     maybeCreate(deviceConfig.taskName, ManagedVirtualDevice::class.java).apply {
                         device = deviceConfig.device
