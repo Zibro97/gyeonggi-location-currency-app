@@ -7,22 +7,22 @@ import com.zibro.gyeonggilocationcurrencyapp.core.database.AppDatabase
 import org.junit.After
 import org.junit.Before
 
-internal abstract class DatabaseTest {
-    private lateinit var db: AppDatabase
+abstract class DatabaseTest {
+    protected lateinit var db: AppDatabase
     protected lateinit var favoriteDao: FavoriteDao
 
     @Before
-    fun setup() {
-        db = run {
-            val context = ApplicationProvider.getApplicationContext<Context>()
-            Room.inMemoryDatabaseBuilder(
-                context,
-                AppDatabase::class.java,
-            ).build()
-        }
+    fun setUp() {
+        val context = ApplicationProvider.getApplicationContext<Context>()
+        db = Room.inMemoryDatabaseBuilder(
+            context,
+            AppDatabase::class.java
+        ).build()
         favoriteDao = db.favoriteDao()
     }
 
     @After
-    fun teardown() = db.close()
+    fun tearDown() {
+        db.close()
+    }
 }
