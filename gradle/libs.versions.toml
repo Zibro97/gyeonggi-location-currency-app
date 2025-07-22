@@ -38,6 +38,7 @@ androidxTestCore = "1.6.1"
 androidxTestExt = "1.2.1"
 androidxTestRules = "1.6.1"
 androidxTestRunner = "1.6.2"
+secrets = "2.0.1"
 
 [libraries]
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
@@ -60,7 +61,7 @@ androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "
 firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
 firebase-crashlytics-ktx = { module = "com.google.firebase:firebase-crashlytics-ktx" }
-firebase-firestore-ktx = { module = "com.google.firebase:firebase-firestore" }
+firebase-firestore-ktx = { module = "com.google.firebase:firebase-firestore-ktx" }
 hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltAndroid" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -101,7 +102,6 @@ androidx-test-ext = { group = "androidx.test.ext", name = "junit-ktx", version.r
 androidx-test-rules = { group = "androidx.test", name = "rules", version.ref = "androidxTestRules" }
 androidx-test-runner = { group = "androidx.test", name = "runner", version.ref = "androidxTestRunner" }
 
-
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
@@ -114,6 +114,7 @@ android-library = { id = "com.android.library", version.ref = "agp" }
 room = { id = "androidx.room", version.ref = "room" }
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+secrets = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "secrets" }
 
 # plugins defined by this project
 gyeonggicurrency-android-application = { id = "gyeonggicurrency.android.application" }
