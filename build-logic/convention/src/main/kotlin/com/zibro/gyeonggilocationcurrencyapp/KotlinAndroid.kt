@@ -26,8 +26,8 @@ internal fun Project.configureKotlinAndroid(
         }
 
         compileOptions {
-            sourceCompatibility = JavaVersion.VERSION_11
-            targetCompatibility = JavaVersion.VERSION_11
+            sourceCompatibility = JavaVersion.VERSION_17
+            targetCompatibility = JavaVersion.VERSION_17
             //구형 기기에 대한 최신 JAVA Api 격차 해소를 위해 Desugaring을 활성화
             isCoreLibraryDesugaringEnabled = true
         }
@@ -43,8 +43,8 @@ internal fun Project.configureKotlinAndroid(
  */
 internal fun Project.configureKotlinJvm() {
     extensions.configure<JavaPluginExtension> {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     configureKotlin<KotlinJvmProjectExtension>()
